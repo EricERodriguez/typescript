@@ -1,39 +1,17 @@
 ( () => {
 
-    // class Avenger {
+    const sumar = (a: number, b: number): number =>  a + b;
 
-    //     nombre: string = 'sin nombre';
-    //     equipo: string;
-    //     nombreReal: string;
+    const nombre = ():string => 'Hola mundo';
 
-    //     puedePelear: boolean;
-    //     peleasGanadas: number;
+    const obtenerSalario = ():Promise <string> => {
+        return new Promise( (resolve, reject) => {
+            resolve (`Fernando`)
 
-    //     constructor(nombre: string, equipo: string){
-    //         this.nombre = nombre;
-    //         this.equipo = equipo;
-    //     }
-    // }
-
-    class Avenger {
-
-        // nombre: string = 'sin nombre';
-        // equipo: string;
-        // nombreReal: string;
-
-        // puedePelear: boolean;
-        // peleasGanadas: number;
-
-        constructor(public  nombre: string,
-                    public  equipo: string,
-                    public  nombreReal?: string,
-                    public  puedePelear: boolean = true,
-                    public  peleasGanadas: number = 0,){
-            
-        }
+        });
     }
 
-    const antman: Avenger = new Avenger('Antman', 'capi');
 
-    console.log(antman);
+    obtenerSalario().then(a => console.log(a.toUpperCase()))
+
 })();
